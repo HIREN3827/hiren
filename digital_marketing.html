@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Marketing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("img/bg_digital_marketing.png");
+            color: rgb(236, 210, 14);
+            font-family: "Playfair Display", serif;
+        }
+
+        .back {
+            float: left;
+            padding: 5px;
+        }
+
+        .back a {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        .back a img {
+            width: 30px;
+            height: auto;
+        }
+
+        .back a h2 {
+            margin-left: 5px;
+            color: rgb(236, 210, 14);
+        }
+
+        header h1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 42px;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.canvas img {
+    width: calc(33.333% - 1rem); 
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    transition: transform 0.4s ease;
+}
+
+@media (max-width: 900px) {
+    .canvas img {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .canvas img {
+        width: 100%; 
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="back">
+            <a href="index.html">
+                <img src="/img/angles-left-solid.svg" alt="Back" />
+                <h2>Back</h2>
+            </a>
+        </div>
+        <h1>Digital Marketing</h1>
+    </header>
+
+    <main>
+        <div class="canvas">
+            <img src="/img/Red and Yellow Simple Cricket Match Instagram Post.png" alt="Cricket Match">
+            <img src="/img/IT Project manager.png" alt="Project Manager" />
+            <img src="/img/Black White and Orange Photocentric Sports Cricket Flyer.png" alt="Royal Sports">
+            <img src="/img/Brown Modern Business Conference Free Poster Template.png" alt="Conference Poster" />
+            <img src="/img/Blue Illustration We're Hiring Copywriter Instagram Story.png" alt="Blue Hiring">
+            <img src="/img/cricket.png" alt="Cricket Poster" />
+            <img src="/img/Black Modern We're Hiring Poster.png" alt="">
+            <img src="/img/old_hiing_2.png" alt="">
+            <img src="/img/old_hiring.png" alt="">
+        </div>
+    </main>
+</body>
+
+</html>

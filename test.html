@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flip Card Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .box {
+      perspective: 1000px;
+      width: 300px;
+      height: 300px;
+      position: relative;
+    }
+
+    .box-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+      transform-origin: center;
+    }
+
+    .box:hover .box-inner {
+      transform: rotateY(180deg);
+    }
+
+    .box-front, .box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box-front .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #fff;
+      border-radius: 50px;
+      background: #000;
+      height: 70px;
+      width: 70px;
+    }
+
+    .box-front .topic {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .box-front p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .box-back {
+      transform: rotateY(180deg);
+      padding: 0;
+    }
+
+    .box-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Flip on click for mobile */
+    @media (max-width: 1000px) {
+      .box:hover .box-inner {
+        transform: none;
+      }
+
+      .box.flip .box-inner {
+        transform: rotateY(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="boxes">
+
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Development</div>
+          <p>My journey began with HTML, CSS, and JS to understand the core of websites.</p>
+        </div>
+        <div class="box-back">
+          <img src="https://via.placeholder.com/300x300" alt="Web Dev">
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Development</div>
+          <p>My journey began with HTML, CSS, and JS to understand the core of websites.</p>
+        </div>
+        <div class="box-back">
+          <img src="https://via.placeholder.com/300x300" alt="Web Dev">
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Development</div>
+          <p>My journey began with HTML, CSS, and JS to understand the core of websites.</p>
+        </div>
+        <div class="box-back">
+          <img src="https://via.placeholder.com/300x300" alt="Web Dev">
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Development</div>
+          <p>My journey began with HTML, CSS, and JS to understand the core of websites.</p>
+        </div>
+        <div class="box-back">
+          <img src="https://via.placeholder.com/300x300" alt="Web Dev">
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-inner">
+        <div class="box-front">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Development</div>
+          <p>My journey began with HTML, CSS, and JS to understand the core of websites.</p>
+        </div>
+        <div class="box-back">
+          <img src="https://via.placeholder.com/300x300" alt="Web Dev">
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate more boxes below as needed -->
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth <= 1000) {
+        const boxes = document.querySelectorAll(".box");
+
+        boxes.forEach(box => {
+          box.addEventListener("click", function () {
+            this.classList.toggle("flip");
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
